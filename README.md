@@ -10,7 +10,7 @@
 
 ## Обзор приложения
 
-Приложение читает изображение (`photo.jpg`) из репозитория и использует OpenCV для обнаружения лиц. Результат выводится в `stdout` (стандартный вывод).
+Приложение читает изображение (`photo_1.jpg`) из репозитория и использует OpenCV для обнаружения лиц. Результат выводится в `stdout` (стандартный вывод).
 
 ### Файлы
 
@@ -24,20 +24,20 @@
 1. **Клонируйте репозиторий**:
 
     ```bash
-    git clone https://github.com/your-username/otrpo_python.git
+    git clone https://github.com/rendei/otrpo_python.git
     cd otrpo_python
     ```
 
 2. **Соберите Docker-образ**:
 
     ```bash
-    docker build -t your-dockerhub-username/otrpo_python:latest .
+    docker pull rendei/otrpo_python:latest
     ```
 
 3. **Запустите Docker-контейнер**:
 
     ```bash
-    docker run your-dockerhub-username/otrpo_python:latest
+    docker run rendei/otrpo_python:latest
     ```
 
    После выполнения этой команды приложение обработает файл `photo.jpg` и выведет результат обнаружения лиц.
