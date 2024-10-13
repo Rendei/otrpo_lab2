@@ -1,12 +1,11 @@
 import cv2
 import sys
-import argparse
+import os
 
-parser = argparse.ArgumentParser(description="Face detection on an image.")
-parser.add_argument('image_path', nargs='?', default='photo_1.jpg', help='Path to the image file')
-
-args = parser.parse_args()
-image_path = args.image_path
+if len(sys.argv) > 1:
+    image_path = sys.argv[1]
+else:
+    image_path = os.path.join(os.path.dirname(__file__), 'photo.jpg')
 
 image = cv2.imread(image_path)
 
