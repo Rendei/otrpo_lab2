@@ -5,12 +5,16 @@ import os
 if len(sys.argv) > 1:
     image_path = sys.argv[1]
 else:
-    image_path = os.path.join(os.path.dirname(__file__), 'photo.jpg')
+    image_path = os.path.join(os.path.dirname(__file__), 'photo_1.jpg')
+
+if not os.path.isfile(image_path):
+    print(f"Error: The file '{image_path}' does not exist.")
+    sys.exit(1)
 
 image = cv2.imread(image_path)
 
 if image is None:
-    print(f"Error: Image '{image_path}' not found.")
+    print(f"Error: Unable to load image from {image_path}")
     sys.exit(1)
 
 
