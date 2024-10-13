@@ -29,5 +29,5 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/otrpo_python:latest
 
-    - name: Image details
-      run: docker image inspect ${{ secrets.DOCKERHUB_USERNAME }}/otrpo_python:latest
+    # - name: Image details
+    #   run: docker image inspect ${{ secrets.DOCKERHUB_USERNAME }}/otrpo_python:latest
