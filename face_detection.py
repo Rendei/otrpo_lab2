@@ -1,15 +1,12 @@
+import argparse
 import cv2
 import sys
-import os
 
-if len(sys.argv) > 1:
-    image_path = sys.argv[1]
-else:
-    image_path = os.path.join(os.path.dirname(__file__), 'photo_1.jpg')
+parser = argparse.ArgumentParser(description="Face detection on an image.")
+parser.add_argument('image_path', nargs='?', default='photo_1.jpg', help='Path to the image file')
 
-if not os.path.isfile(image_path):
-    print(f"Error: The file '{image_path}' does not exist.")
-    sys.exit(1)
+args = parser.parse_args()
+image_path = args.image_path
 
 image = cv2.imread(image_path)
 
