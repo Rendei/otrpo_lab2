@@ -1,4 +1,3 @@
-# Используем базовый образ с поддержкой графики
 FROM jupyter/scipy-notebook:latest
 
 # RUN apt-get update && \
@@ -16,4 +15,4 @@ WORKDIR /app
 
 ENV DISPLAY=:0
 
-CMD ["python", "face_detection.py"]
+ENTRYPOINT ["python", "face_detection.py"]
