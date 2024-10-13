@@ -24,7 +24,7 @@ print(f"Found {len(faces)} face(s)")
 for (x, y, w, h) in faces:
     cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
 
-output_image_path = f"{image_path.split(".jpg")[0]}_output.jpg"
+output_image_path = f"{image_path.split('.jpg')[0]}_output.jpg"
 cv2.imwrite(output_image_path, image)
 print(f"Saved output image to {output_image_path}")
 
